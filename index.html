@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="css/Normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="all">
+      <div class="name">Password Generator</div>
+      <div id="password"></div>
+      <small>error generator</small>
+      <div class="generate">
+        <div class="info">
+          <p>character length</p>
+          <span id="length">7</span>
+        </div>
+        <input id="range" type="range" min="7" max="20" step="1" value="7">
+        <div class="change">
+          <div class="uppercase All">
+            <div class="toggle"></div>
+            <input type="checkbox" id="uppercase">
+            <label for="uppercase">include uppercase letters</label>
+          </div>
+          <div class="lowercase All">
+            <div class="toggle"></div>
+            <input type="checkbox" id="lowercase">
+            <label for="lowercase">include lowercase letters</label>
+          </div>
+          <div class="number All">
+            <div class="toggle"></div>
+            <input type="checkbox" id="number">
+            <label for="number">include number</label>
+          </div>
+          <div class="symbols All">
+            <div class="toggle"></div>
+            <input type="checkbox" id="symbols">
+            <label for="symbols">include symbols</label>
+          </div>
+        </div>
+
+        <button id="generator">generate <i class="fa-solid fa-arrow-right"></i></button>
+
+      </div>
+    </div>
+
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

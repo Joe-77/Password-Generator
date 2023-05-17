@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #120101;
+  font-family: "Times New Roman", Times, serif;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .all .name {
+  color: gray;
+  width: fit-content;
+  letter-spacing: 1px;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.container .all #password {
+  color: white;
+  width: 320px;
+  background-color: #24232b;
+  padding: 10px 10px;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.container .generate {
+  margin-top: 30px;
+  background-color: #24232b;
+  padding: 10px 15px;
+}
+.container .generate .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .generate .info p {
+  color: white;
+  text-transform: capitalize;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+.container .generate .info span {
+  color: #7abe83;
+  user-select: none;
+}
+.container .generate #range {
+  margin-top: 15px;
+  height: 5px;
+  width: 80%;
+  cursor: pointer;
+}
+.change {
+  margin-top: 15px;
+}
+.change .All {
+  display: flex;
+  gap: 8px;
+}
+.change .All input {
+  appearance: none;
+}
+.change .All label {
+  color: white;
+  font-size: 12px;
+  text-transform: capitalize;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+.change .All .toggle {
+  width: 12px;
+  height: 12px;
+  border-radius: 1px;
+  border: 1px solid #eee;
+}
+.change .All label::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f00c";
+  font-weight: bold;
+  position: absolute;
+  left: -28px;
+  width: 12px;
+  height: 12px;
+  border-radius: 1px;
+  background-color: #9bddad;
+  color: black;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  transform: scale(0);
+}
+.change .All input:checked + label::before {
+  transform: scale(1) rotate(360deg);
+}
+.lowercase,
+.number,
+.symbols {
+  margin-top: 20px;
+}
+
+button {
+  margin: 20px auto;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 10px;
+  width: 100%;
+  background-color: transparent;
+  color: #7abe83;
+  border: 2px solid #7abe83;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+}
+button i {
+  font-size: 10px;
+  animation: left-right 0.7s infinite alternate;
+}
+small {
+  color: #a42020;
+  text-transform: capitalize;
+  margin-top: 5px;
+  letter-spacing: 1px;
+  display: none;
+}
+
+@keyframes left-right {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(5px);
+  }
+}
+
+@media (max-width: 340px) {
+  .container .all #password {
+    width: 250px;
+    font-size: 14px;
+  }
+}
